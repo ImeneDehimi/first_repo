@@ -97,6 +97,7 @@ section {
 
 }
 .btn:hover {
+  cursor: pointer;
   color: var(--second-bg-color);
   transform: transLateX(5px);
   background: transparent;
@@ -245,23 +246,27 @@ form textarea {
 .contact-form textarea {
     resize: none;
     height: 220px;
+    
 }
-.contact-form form .send{
-    display: inline-block;
-    font-size: 17px;
-    font-weight: 500;
-    background: var(--bg-color);
-    color: white;
-    width: 190px;
-    transition: all .40s ease;
-    cursor: pointer;
+.button button{
+  cursor: pointer;
+  display: inline-bLlock;
+  padding: 16px 45px;
+  background: var(--bg-color);
+  color: white;
+  font-size: var(--p-font);
+  font-weight: 600;
+  border: 2px solid var(--bg-color);
+  transition: all ease 0.5s;
+  border-radius: 0.5rem;
 }
-.contact-form form .send:hover{
-    color: var(--second-bg-color);
-    transform: transLateX(5px);
-    background: transparent;
-    border: 2px solid var(--second-bg-color);
+.button button:hover {
+  color: var(--second-bg-color);
+  transform: transLateX(5px);
+  background: transparent;
+  border: 2px solid var(--second-bg-color);
 }
+
 /*----footer section----*/
 .footer{
     text-align: center;

@@ -14,7 +14,16 @@
       href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;600;700;800&family=El+Messiri&family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("YDFlSmDoga--hezN_");
+      })();
+    </script>
+    <script src="js/main.js"></script>
     <title>My Portfolio</title>
   </head>
   <body>
@@ -105,7 +114,9 @@
             placeholder="Enter Your Message"
             required
           ></textarea>
-          <button type="submit" class="btn btn-primary" onclick="sendMail();">Submit</button>
+          <div class="button">
+            <button type="submit" onclick="sendMail()">Submit</button>
+          </div>
         </form>
       </div>
     </section>
@@ -120,27 +131,5 @@
         <a href="#"><i class="bx bxl-whatsapp"></i></a>
       </div>
     </section>
-
-    <script>
-      function sendMail() {
-        (function () {
-          emailjs.init("YDFlSmDoga--hezN_");
-        })();
-
-        var params = {
-          name: document.querySelector("#name").value,
-          email: document.querySelector("#email").value,
-          subject: document.querySelector("#subject").value,
-          message: document.querySelector("#message").value,
-          };
-
-          var serviceId = "service_cnsptda";
-          var templateId = "template_nbpjtjs";
-          emailjs.send(serviceId, templateId, params)
-          .then(res=>{
-            alert("form sent sccessfully");
-          })
-      }
-    </script>
   </body>
 </html>
